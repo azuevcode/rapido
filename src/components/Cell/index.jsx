@@ -1,17 +1,22 @@
-import React, { useState } from 'react';
-import { Cell } from './styles';
+import styled, { css } from 'styled-components';
+import { Button } from 'components/ui';
 
-const CellComponent = ({ children, onActiveChange }) => {
-  const [active, toggleActive] = useState(false);
-  const handleActiveChange = () => {
-    onActiveChange(!active);
-    toggleActive(!active);
-  };
+const Cell = styled(Button)`
+  border: 1px solid #DDDDDD;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  min-width: 40px;
+  box-sizing: border-box;
+  padding: 0;
 
-  return (
-    <Cell onClick={handleActiveChange} active={active}>{children}</Cell>
-  );
-};
+  ${({ selected }) => selected && css`
+    transform: scale(0.95);
+    background-color: #FFD205;
+  `}
+`;
 
-CellComponent.displayName = 'Cell';
-export default CellComponent;
+export default Cell;

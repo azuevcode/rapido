@@ -27,6 +27,8 @@ module.exports = {
     'import/no-unresolved': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['js', '.jsx'] }],
     'no-confusing-arrow': 'off',
-    'jsx-a11y/img-has-alt': 'off',
+    'arrow-body-style': 'off',
+    'no-restricted-syntax': 'off',
+    'no-plusplus': 'off',
   },
 };

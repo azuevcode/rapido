@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import Block from './components/Block';
-import CalculationArea from './components/CalculationArea';
-import ResultArea from './components/ResultArea';
+import Block from 'components/Block';
+import CalculationArea from 'components/CalculationArea';
+import ResultArea from 'components/ResultArea';
 import {
   Container,
   TicketTitle,
 } from './styles';
 
 const App = () => {
-  const [isTicketWon, toggleTicketResult] = useState(false);
+  const [isTicketWon, setTicketResult] = useState(false);
   const [showResult, toggleResultVisibility] = useState(false);
   const handleResultVisibilityChange = () => {
     toggleResultVisibility(!showResult);
@@ -22,7 +22,7 @@ const App = () => {
           !showResult ?
             <CalculationArea
               onResultShow={handleResultVisibilityChange}
-              onTicketResultChange={() => { toggleTicketResult(!isTicketWon); }}
+              onTicketResultChange={(result) => { setTicketResult(result); }}
             /> :
             <ResultArea
               isTicketWon={isTicketWon}

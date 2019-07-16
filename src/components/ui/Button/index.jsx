@@ -7,7 +7,7 @@ const Button = styled.button`
   border: 1px solid rgba(0, 0, 0, 0.16);
   cursor: pointer;
   outline: none;
-  transition: .3s;
+  transition: .1s;
 
 
   &:hover:enabled {
@@ -16,8 +16,12 @@ const Button = styled.button`
   }
 
   &:active {
-    transition: .3s;
     transform: scale(0.97);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    transition: .3s;
   }
 `;
 

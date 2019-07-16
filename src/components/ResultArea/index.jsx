@@ -1,4 +1,5 @@
 import React from 'react';
+import { ResultMessage } from './styles';
 import { Button } from 'components/ui';
 
 const ResultArea = ({
@@ -6,13 +7,13 @@ const ResultArea = ({
   onReset,
 }) => (
   <div>
-    <div>
+    <ResultMessage>
       {
         isTicketWon ?
           'Ого, вы выиграли! Поздравляем!' :
           'К сожалению, вам не повезло. Попробуйте еще раз!'
       }
-    </div>
+    </ResultMessage>
     <Button onClick={onReset}>Попробовать еще</Button>
   </div>
 );

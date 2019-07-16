@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Grid from 'components/Grid';
 import {
   Field,
@@ -21,11 +22,18 @@ const FieldComponent = ({
       </Head>
       <Grid
         items={numbers}
-        onSelectedChange={(index) => { onSelectedNumbersChange(index); }}
+        onSelectedItemsChange={onSelectedNumbersChange}
       />
     </Field>
   );
 };
 
 FieldComponent.displayName = 'Field';
+FieldComponent.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  numbers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onSelectedNumbersChange: PropTypes.func.isRequired,
+};
+
 export default FieldComponent;

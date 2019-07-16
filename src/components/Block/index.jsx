@@ -7,6 +7,7 @@ const Block = styled.div`
   height: 800px;
   margin: auto;
   padding: 20px;
+  position: relative;
 `;
 
 export default Block;
