@@ -1,6 +1,7 @@
 import React from 'react';
-import { ResultMessage } from './styles';
+import PropTypes from 'prop-types';
 import { Button } from 'components/ui';
+import { ResultMessage } from './styles';
 
 const ResultArea = ({
   isTicketWon,
@@ -17,5 +18,10 @@ const ResultArea = ({
     <Button onClick={onReset}>Попробовать еще</Button>
   </div>
 );
+
+ResultArea.propTypes = {
+  isTicketWon: PropTypes.bool.isRequired,
+  onReset: PropTypes.func.isRequired,
+};
 
 export default ResultArea;

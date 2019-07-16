@@ -9,7 +9,7 @@ export const filterSelected = item => item.selected;
  * @param {array} selected - массив-аккумулятор для конечного результата
  * @param {object} item - объект с выбранным числом
  */
-export const getSelectedValue = (selected, item) => {
+export const assembleSelectedValues = (selected, item) => {
   return item.selected ? [...selected, item.value] : selected;
 };
 
@@ -24,19 +24,17 @@ export const generateRandomArray = (size, maxBound) => {
 };
 
 /**
- * Проверяет совпадение между пользовательскими и случайно сгенерированными числами
+ * Проверяет количество совпадение между пользовательскими и случайно сгенерированными числами
  * @param {array} userNumbers - пользовательские числа
  * @param {array} randomNumbers - случайно сгенерированные числа
- * @param {number} minMatches - необходимое число совпадений для выигрыша
- * @returns {boolean}
+ * @returns {number}
  */
-export const checkFieldResult = (userNumbers, randomNumbers, minMatches) => {
+export const checkFieldMatches = (userNumbers, randomNumbers) => {
   let matches = 0;
-  for (const selectedNumber of userNumbers) {
+  userNumbers.forEach((selectedNumber) => {
     if (randomNumbers.includes(selectedNumber)) matches++;
-    if (matches === minMatches) break;
-  }
-  return matches >= minMatches;
+  });
+  return matches;
 };
 
 /**

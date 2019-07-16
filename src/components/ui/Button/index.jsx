@@ -8,7 +8,7 @@ const Button = styled.button`
   cursor: pointer;
   outline: none;
   transition: .1s;
-
+  margin: 5px 0;
 
   &:hover:enabled {
     transition: .3s;

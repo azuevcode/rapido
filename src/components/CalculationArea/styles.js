@@ -6,3 +6,11 @@ export const MagicWand = styled.img`
   top: 20px;
   right: 20px;
 `;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  max-width: 530px;
+  align-items: center;
+  flex-wrap: wrap;
+`;

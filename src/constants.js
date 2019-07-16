@@ -2,7 +2,7 @@ import { createNumberArray } from './utils';
 
 // Таким способом решил сгенерировать начальный объект чисел :)
 export const NUMBERS = {
-  firstField: createNumberArray(20),
+  firstField: createNumberArray(19),
   secondField: createNumberArray(2),
 };
 
