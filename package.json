@@ -8,7 +8,13 @@
     "react-scripts": "0.9.x",
     "styled-components": "^4.3.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

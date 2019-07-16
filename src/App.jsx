@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-
 import Block from './components/Block';
-import CalculationContainer from './components/CalculationContainer';
-// import Field from './components/Field';
-import { Button } from './components/ui';
-
+import CalculationArea from './components/CalculationArea';
+import ResultArea from './components/ResultArea';
 import {
   Container,
   TicketTitle,
@@ -20,7 +17,7 @@ const App = () => {
   return (
     <Container>
       <Block>
-        <TicketTitle>Билет 1</TicketTitle>
+        <TicketTitle>Билет</TicketTitle>
         {
           !showResult ?
             <CalculationArea
@@ -32,15 +29,6 @@ const App = () => {
               onReset={handleResultVisibilityChange}
             />
         }
-        {/* <Field
-          name='Поле 1'
-          description='Отметьте 8 чисел'
-        />
-        <Field
-          name='Поле 2'
-          description='Отметьте 1 число'
-        /> */}
-        <Button>Показать результаты</Button>
       </Block>
     </Container>
   );
